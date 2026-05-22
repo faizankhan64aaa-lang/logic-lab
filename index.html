@@ -1,0 +1,106 @@
+Add some tips for a person if he/she is under weight and normal etc<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMI Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero-panel">
+      <div class="hero-copy">
+        <span class="eyebrow">Health & Wellness</span>
+        <h1>Smart BMI Calculator</h1>
+        <p>Measure your body mass index with precision and discover the right category for your health journey.</p>
+      </div>
+      <div class="hero-card">
+        <div class="card-header">
+          <div>
+            <p class="small-title">Enter your details</p>
+            <h2>Calculate your BMI</h2>
+          </div>
+          <div class="badge">Fast & Accurate</div>
+        </div>
+
+        <form id="bmiForm" class="input-grid">
+          <label>
+            <span>Height (cm)</span>
+            <input id="heightInput" type="number" min="50" max="300" step="0.1" placeholder="170" required />
+          </label>
+
+          <label>
+            <span>Weight (kg)</span>
+            <input id="weightInput" type="number" min="20" max="250" step="0.1" placeholder="65" required />
+          </label>
+
+          <label>
+            <span>Gender</span>
+            <select id="genderInput">
+              <option value="female">Female</option>
+              <option value="male" selected>Male</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+
+          <label class="range-control">
+            <span>Age</span>
+            <input id="ageInput" type="number" min="10" max="120" placeholder="28" />
+          </label>
+
+          <label class="range-control">
+            <span>Activity Level</span>
+            <select id="activityInput">
+              <option value="1.2">Low</option>
+              <option value="1.375">Light</option>
+              <option value="1.55" selected>Moderate</option>
+              <option value="1.725">Active</option>
+            </select>
+          </label>
+
+          <button type="submit" class="action-button">Compute BMI</button>
+        </form>
+
+        <div class="result-panel hidden" id="resultPanel">
+          <div class="result-card">
+            <p class="result-label">Your BMI</p>
+            <strong id="bmiValue">0.0</strong>
+          </div>
+          <div class="result-meta">
+            <p id="bmiCategory">Category</p>
+            <div id="bmiAdvice">Enter valid height and weight to view your health guidance.</div>
+            <div id="foodSuggestions" style="margin-top:12px; color:#e6f7ff;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-grid">
+      <div class="info-card info-primary">
+        <h3>BMI Range Reference</h3>
+        <ul>
+          <li><strong>Underweight</strong> &lt; 18.5</li>
+          <li><strong>Normal</strong> 18.5 - 24.9</li>
+          <li><strong>Overweight</strong> 25 - 29.9</li>
+          <li><strong>Obese</strong> ≥ 30</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>How BMI works</h3>
+        <p>BMI compares your weight and height to estimate body fat. It is a useful general guide but does not replace professional medical advice.</p>
+      </div>
+
+      <div class="info-card">
+        <h3>Health tips</h3>
+        <p>For best outcomes, combine balanced nutrition, regular exercise, hydration, and rest. Use this tool to monitor trends over time.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
